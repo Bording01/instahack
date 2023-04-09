@@ -5,6 +5,22 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Launch Chrome",
+            "request": "launch",
+            "type": "chrome",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "type": "bashdb",
+            "request": "launch",
+            "name": "Bash-Debug (select script from list of sh files)",
+            "cwd": "${workspaceFolder}",
+            "program": "${command:SelectScriptName}",
+            "args": []
+        },
+
+        {
             "name": "Electron Main",
             "program": "${workspaceFolder}/main.js",
             "request": "launch",
@@ -17,7 +33,7 @@
         {
             "type": "bashdb",
             "request": "launch",
-            "name": "Bash-Debug (simplest configuration)",
+         "name": "Bash-Debug (simplest configuration)",
             "program": "${file}"
         }
     ]
